@@ -526,6 +526,42 @@
     </div>
 
 </div>
+
+      <!-- Smart Night Light Board -->
+<div class="project-card">
+
+    <div class="project-img-wrap">
+        <img
+            id="nightLightImg"
+            src="./night-light-schematic.jpeg"
+            alt="Smart Night Light Board"
+        >
+
+        <div class="project-img-nav">
+            <button onclick="prevNightLightImage()">❮</button>
+            <button onclick="nextNightLightImage()">❯</button>
+        </div>
+    </div>
+
+    <div class="project-body">
+
+        <div class="project-tags">
+            <span class="tag">ALTIUM DESIGNER</span>
+            <span class="tag green">PCB DESIGN</span>
+            <span class="tag cyan">EMBEDDED</span>
+        </div>
+
+        <h3 class="project-title">
+            Smart Night Light Board
+        </h3>
+
+        <p class="project-desc">
+            Designed a smart night light control board using an LDR-based sensing circuit, NE555 timer, transistor switching stage, and relay output for automatic lighting control. Completed the full workflow from schematic capture and PCB routing to 3D board verification while applying practical PCB design rules for manufacturability and reliable operation.
+        </p>
+
+    </div>
+
+</div>
       
     </div>
   </div>
@@ -796,6 +832,28 @@ function nextIoTImage() {
 function prevIoTImage() {
     currentIoT = (currentIoT - 1 + iotImages.length) % iotImages.length;
     showIoTImage();
+}
+
+    const nightLightImages = [
+    "./night-light-schematic.jpeg",
+    "./night-light-3d.jpeg",
+    "./night-light-layout.jpeg"
+];
+
+let currentNightLight = 0;
+
+function showNightLightImage() {
+    document.getElementById("nightLightImg").src = nightLightImages[currentNightLight];
+}
+
+function nextNightLightImage() {
+    currentNightLight = (currentNightLight + 1) % nightLightImages.length;
+    showNightLightImage();
+}
+
+function prevNightLightImage() {
+    currentNightLight = (currentNightLight - 1 + nightLightImages.length) % nightLightImages.length;
+    showNightLightImage();
 }
 </script>
   
